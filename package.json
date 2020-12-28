@@ -36,15 +36,15 @@
   },
   "devDependencies": {
     "@types/debug": "0.0.29",
-    "@types/i2c-bus": "^1.0",
     "@types/node": "^4.0",
-    "i2c-bus": "^1.1",
     "tslint": "^3.15",
-    "typescript": "^2.0"
+    "typescript": "^3.0"
   },
   "dependencies": {
-    "debug": "^2.2",
-    "rxjs": "5.0.0-rc.4"
+    "@types/i2c-bus": "^5.1.0",
+    "debug": "^4.3.1",
+    "i2c-bus": "^5.2.1",
+    "rxjs": "^5.0.0-rc.4"
   },
   "directories": {
     "example": "examples"
