@@ -1,7 +1,7 @@
 import { I2CBus } from "i2c-bus";
-import "rxjs/operators/concatMap";
+import "rxjs/add/operator/concatMap";
 export interface Pca9685Options {
-    /** An open I2CBus object to be used to communicate with the PCA9685 driver. */
+    /** An open I2cBus object to be used to communicate with the PCA9685 driver. */
     i2c: I2CBus;
     /**
      * The I2C address of the PCA9685 driver.
@@ -110,7 +110,7 @@ export declare class Pca9685Driver {
      * @param callback
      *     Callback called once the packets have been sent or an error occurs.
      */
-    private send;
+    private send(packets, callback);
     /**
      * Set the internal frequency of the PCA9685 to the given value.
      *
@@ -119,8 +119,8 @@ export declare class Pca9685Driver {
      * @param callback
      *     Callback called once the frequency has been sent or an error occurs.
      */
-    private setFrequency;
-    private static createSetFrequencyStep2;
+    private setFrequency(frequency, callback);
+    private static createSetFrequencyStep2(sendFunc, debug, prescale, callback);
     private address;
     private commandSubject;
     private debug;

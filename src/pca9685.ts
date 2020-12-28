@@ -13,7 +13,7 @@ import { I2CBus } from "i2c-bus";
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";
 import { Subscriber } from "rxjs/Subscriber";
-import "rxjs/operators/concatMap";
+import "rxjs/add/operator/concatMap";
 
 
 const constants = {
@@ -42,7 +42,7 @@ const constants = {
 
 
 export interface Pca9685Options {
-    /** An open I2CBus object to be used to communicate with the PCA9685 driver. */
+    /** An open I2cBus object to be used to communicate with the PCA9685 driver. */
     i2c: I2CBus;
 
     /**
@@ -134,9 +134,9 @@ export class Pca9685Driver {
         };
 
         // create a stream that will send each packet group in sequence using the async writeByte command
-        (this.commandSubject as any)
+        this.commandSubject
             .concatMap(group => {
-                return new Observable<void>((subscriber: Subscriber<any>) => {
+                return new Observable<void>((subscriber: Subscriber<void>) => {
                     let nextPacket = 0;
 
                     function sendNextPacket(err?: any): void {

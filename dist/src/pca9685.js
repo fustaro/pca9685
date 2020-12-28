@@ -9,11 +9,10 @@
  * Licensed under the MIT license.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Pca9685Driver = void 0;
 var debugFactory = require("debug");
 var Observable_1 = require("rxjs/Observable");
 var Subject_1 = require("rxjs/Subject");
-require("rxjs/operators/concatMap");
+require("rxjs/add/operator/concatMap");
 var constants = {
     modeRegister1: 0x00,
     modeRegister1Default: 0x01,
@@ -42,7 +41,7 @@ function defaultCallback(err) {
         console.log("Error writing to PCA8685 via I2C", err);
     }
 }
-var Pca9685Driver = /** @class */ (function () {
+var Pca9685Driver = (function () {
     /**
      * Constructs a new PCA9685 driver.
      *
