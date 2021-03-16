@@ -9,6 +9,7 @@
  * Licensed under the MIT license.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pca9685Driver = exports.default = void 0;
 var pca9685_1 = require("./src/pca9685");
-exports.default = pca9685_1.Pca9685Driver;
-exports.Pca9685Driver = pca9685_1.Pca9685Driver;
+Object.defineProperty(exports, "default", { enumerable: true, get: function () { return pca9685_1.Pca9685Driver; } });
+Object.defineProperty(exports, "Pca9685Driver", { enumerable: true, get: function () { return pca9685_1.Pca9685Driver; } });

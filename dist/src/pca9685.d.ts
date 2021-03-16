@@ -110,7 +110,7 @@ export declare class Pca9685Driver {
      * @param callback
      *     Callback called once the packets have been sent or an error occurs.
      */
-    private send(packets, callback);
+    private send;
     /**
      * Set the internal frequency of the PCA9685 to the given value.
      *
@@ -119,8 +119,8 @@ export declare class Pca9685Driver {
      * @param callback
      *     Callback called once the frequency has been sent or an error occurs.
      */
-    private setFrequency(frequency, callback);
-    private static createSetFrequencyStep2(sendFunc, debug, prescale, callback);
+    private setFrequency;
+    private static createSetFrequencyStep2;
     private address;
     private commandSubject;
     private debug;
