@@ -8,8 +8,8 @@
     "email": "jasonpheard@gmail.com"
   },
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/pca9685.js",
+  "typings": "dist/pca9685.d.ts",
   "keywords": [
     "pca9685",
     "i2c",

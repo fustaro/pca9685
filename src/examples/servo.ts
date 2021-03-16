@@ -11,7 +11,7 @@
 
 import * as i2cBus from "i2c-bus";
 
-import Pca9685Driver from "../";
+import { Pca9685Driver } from "../pca9685";
 
 
 // PCA9685 options

@@ -11,7 +11,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var i2cBus = require("i2c-bus");
-var __1 = require("../");
+var pca9685_1 = require("../pca9685");
 // PCA9685 options
 var options = {
     i2c: i2cBus.openSync(1),
@@ -43,7 +43,7 @@ process.on("SIGINT", function () {
     pwm.dispose();
 });
 // initialize PCA9685 and start loop once initialized
-pwm = new __1.default(options, function startLoop(err) {
+pwm = new pca9685_1.Pca9685Driver(options, function startLoop(err) {
     if (err) {
         console.error("Error initializing PCA9685");
         process.exit(-1);
